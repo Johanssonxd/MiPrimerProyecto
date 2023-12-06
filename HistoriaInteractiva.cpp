@@ -64,7 +64,1256 @@ int main()
             cout<<"3.- Buscar una salida\n Opción: ";
             cin>>decision;
 
-			
+			if (decision == 1){
+                cout<<"\nAl explorar, te encuentras con una criatura amigable que te ofrece ayuda.\n";
+                cout<<"¿Aceptas su ayuda?\n";
+                cout<<"1.- Sí\n";
+                cout<<"2.- No\n";
+                cout<<"3.- La intentas atacar\n";
+                cout<<" Opción: ";
+                cin>>decision;
+
+                if (decision == 1){
+                    cout<<"\nLa criatura te guía a través de un portal que te lleva de vuelta a tu mundo, pero exiten algunos obstaculos en el camino.\n";
+                    vida -= 92;
+                    cout<<"Al final llegas a tu mundo de nuevo y antes de regresar te restan " <<vida<< " puntos de vida.\n";
+                    cout<<"FIN\n";
+                    cout<<"!Gracias por jugar¡";
+                
+                } 
+                else if (decision == 2){
+                    cout<<"\nDecides no aceptar la ayuda y continúas explorando por tu cuenta.\n";
+                    cout<<"Cuando estas a punto de irte la criatura te menciona que si no aceptas su ayuda moriras en un mundo tan violento como ese.\n";
+                    cout<<"Al final por el miedo aceptas su ayuda.\n";
+                    cout<<"\nLa criatura esta dispuesta a ayudarte a volver a tu mundo, pero primero tienes que hacerle un par de favores.\n";
+                    cout<<"¿Que deseas hacer?\n";
+                    cout<<"1.- Ayudarle (No tienes de otra, ¿o si?).\n";
+                    cout<<"2.- Negarte eh ir por tu cuenta.\n";
+                    cout<<"3.- Negociar para que te ayude sin necesidad de hacer los favores.\n";
+                    cout<<" Opcion: ";
+                    cin>>decision;
+
+                    if(decision == 1){
+                        cout<<"\nAceptas con la condicion de que te ayude a salir.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                        cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                        vida -= 50;
+                        cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                        cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                        cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                        cout<<"¿Que haces?\n";
+                        cout<<"1.- Avisarle a la criatura\n";
+                        cout<<"2.- No decir nada\n";
+                        cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        if(decision == 1){
+                            cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                            cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                            cout<<"¿Que respondes?\n";
+                            cout<<"1.- Decides quedarte para averiguar mas.\n";
+                            cout<<"2.- Pones alguna excusa para safarte.\n";
+                            cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+                                case 1: 
+                                cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                cout<<"Continuará...\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2: 
+                                cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3:
+                                cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                cout<<"Continuará...";
+                                cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                default: cout<<"Tenías que arrinarlo :P";
+
+                            }
+
+                        }
+                        else if(decision == 2){
+                            cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                            cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                            cout<<"FIN\n";
+                            cout<<"¡Gracias por jugar!";
+
+                        }
+                        else if(decision == 3){
+                            cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                            cout<<"¿Que quieres hacer?\n";
+                            cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                            cout<<"2.- Huir.\n";
+                            cout<<"3.- Gritar para pedir ayuda.\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+
+                                case 1:
+                                cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2:
+                                cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                vida -=20;
+                                cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3: 
+                                cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+
+                                default: cout<<"Elije una opcion correcta";
+
+                            }
+                        }
+                        else{
+                            cout<<"\nCreo que tienes que leer mejor :P";
+
+                        }
+
+                    }
+                    else if(decision == 2){
+                        cout<<"\nEliges ir por tu cuenta y te alejas demasiado de la criatura y terminas encontrandote con un enemigo poderoso.\n";
+                        cout<<"¿Que quieres hacer?\n";
+                        cout<<"1.- Atacar.\n";
+                        cout<<"2.- Huir.\n";
+                        cout<<"3.- Gritar para pedir ayuda.\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        switch(decision){
+
+                            case 1:
+                            cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 2:
+                            cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                            vida -=20;
+                            cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                            cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                            cout<<"Lamentas su perdida y una voz te propone acabar con la maldad de ese mundo.\n";
+                            cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                            cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 3: 
+                            cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+
+                            default: cout<<"\nElije una opcion correcta";
+
+                        }
+                    }
+                    else if(decision == 3){
+                        cout<<"\nNo consigues nada negociando y te somete pues no tienesopcion.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                        cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                        vida -= 50;
+                        cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                        cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                        cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                        cout<<"¿Que haces?\n";
+                        cout<<"1.- Avisarle a la criatura\n";
+                        cout<<"2.- No decir nada\n";
+                        cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        if(decision == 1){
+                            cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                            cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                            cout<<"¿Que respondes?\n";
+                            cout<<"1.- Decides quedarte para averiguar mas.\n";
+                            cout<<"2.- Pones alguna excusa para safarte.\n";
+                            cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+                                case 1: 
+                                cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                cout<<"Continuará...\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2: 
+                                cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3:
+                                cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                cout<<"Continuará...";
+                                cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                default: cout<<"Tenías que arrinarlo :P";
+
+                            }
+
+                        }
+                        else if(decision == 2){
+                            cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                            cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                            cout<<"FIN\n";
+                            cout<<"¡Gracias por jugar!";
+
+                        }
+                        else if(decision == 3){
+                            cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                            cout<<"¿Que quieres hacer?\n";
+                            cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                            cout<<"2.- Huir.\n";
+                            cout<<"3.- Gritar para pedir ayuda.\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+
+                                case 1:
+                                cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2:
+                                cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                vida -=20;
+                                cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3: 
+                                cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+
+                                default: cout<<"\nElije una opcion correcta";
+
+                            }
+                        }
+                        else{
+                            cout<<"\nCreo que tienes que leer mejor :P";
+
+                        }
+
+                    }
+                    else{
+                        cout<<"\nElija una opción correcta por favor.";
+
+                    }
+
+                } 
+                else if (decision == 3){
+                    cout<<"\nLa criatura te somete y te perdona la vida, pues eres un novato que no sabe lo que hace.\n";
+                    cout<<"¿Que haces?\n";
+                    cout<<"1.- Te enfadas y lo vuelves a atacar\n";
+                    cout<<"2.- Te relajas e intentas reconciliarte\n";
+                    cout<<"3.- Sales huyendo\n";
+                    cout<<" Opcion: ";
+                    cin>>decision;
+                    
+                    if(decision == 1){
+                        cout<<"\nMueres por tu inexperiencia en combate\n";
+                        vida -= 100;
+                        cout<<"Tu vida baja a " <<vida<< " puntos.\n"; 
+                        cout<<"Fin del juego\n";
+                        cout<<"¡Gracias por jugar!";
+
+                    }
+                    else if(decision == 2){
+                        cout<<"\nLa criatura esta dispuesta a ayudarte a volver a tu mundo, pero primero tienes que hacerle un par de favores por el inconveniente provocado.\n";
+                        cout<<"¿Que deseas hacer?\n";
+                        cout<<"1.- Ayudarle (No tienes de otra, ¿o si?).\n";
+                        cout<<"2.- Negarte eh ir por tu cuenta.\n";
+                        cout<<"3.- Negociar para que te ayude sin necesidad de hacer los favores.\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        if(decision == 1){
+                            cout<<"\nAceptas con la condicion de que te ayude a salir.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                            cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                            vida -= 50;
+                            cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                            cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                            cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                            cout<<"¿Que haces?\n";
+                            cout<<"1.- Avisarle a la criatura\n";
+                            cout<<"2.- No decir nada\n";
+                            cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            if(decision == 1){
+                                cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                                cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                                cout<<"¿Que respondes?\n";
+                                cout<<"1.- Decides quedarte para averiguar mas.\n";
+                                cout<<"2.- Pones alguna excusa para safarte.\n";
+                                cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+                                    case 1: 
+                                    cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                    cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                    cout<<"Continuará...\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2: 
+                                    cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                    cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                    cout<<"FIN\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3:
+                                    cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                    cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                    cout<<"Continuará...";
+                                    cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                    default: cout<<"Tenías que arrinarlo :P";
+
+                                }
+
+                            }
+                            else if(decision == 2){
+                                cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                                cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+
+                            }
+                            else if(decision == 3){
+                                cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                                cout<<"¿Que quieres hacer?\n";
+                                cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                                cout<<"2.- Huir.\n";
+                                cout<<"3.- Gritar para pedir ayuda.\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+
+                                    case 1:
+                                    cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2:
+                                    cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                    vida -=20;
+                                    cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                    cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                    cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                    cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                    cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3: 
+                                    cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+
+                                    default: cout<<"\nElije una opcion correcta";
+
+                                }
+                            }
+                            else{
+                                cout<<"\nCreo que tienes que leer mejor :P";
+
+                            }
+
+                        }
+                        else if(decision == 2){
+                            cout<<"\nEliges ir por tu cuenta y te alejas demasiado de la criatura y terminas encontrandote con un enemigo poderoso.\n";
+                            cout<<"¿Que quieres hacer?\n";
+                            cout<<"1.- Atacar.\n";
+                            cout<<"2.- Huir.\n";
+                            cout<<"3.- Gritar para pedir ayuda.\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+
+                                case 1:
+                                cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                vida -=100;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2:
+                                cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                vida -=20;
+                                cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                cout<<"Lamentas su perdida y una voz te propone acabar con la maldad de ese mundo.\n";
+                                cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3: 
+                                cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                vida -=100;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+
+                                default: cout<<"Elije una opcion correcta";
+
+                            }
+                        }
+                        else if(decision == 3){
+                            cout<<"\nNo consigues nada negociando y te somete pues no tienesopcion.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                            cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                            vida -= 50;
+                            cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                            cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                            cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                            cout<<"¿Que haces?\n";
+                            cout<<"1.- Avisarle a la criatura\n";
+                            cout<<"2.- No decir nada\n";
+                            cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            if(decision == 1){
+                                cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                                cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                                cout<<"¿Que respondes?\n";
+                                cout<<"1.- Decides quedarte para averiguar mas.\n";
+                                cout<<"2.- Pones alguna excusa para safarte.\n";
+                                cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+                                    case 1: 
+                                    cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                    cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                    cout<<"Continuará...\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2: 
+                                    cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                    cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                    cout<<"FIN\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3:
+                                    cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                    cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                    cout<<"Continuará...";
+                                    cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                    default: cout<<"\nTenías que arrinarlo :P";
+
+                                }
+
+                            }
+                            else if(decision == 2){
+                                cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                                cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+
+                            }
+                            else if(decision == 3){
+                                cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                                cout<<"¿Que quieres hacer?\n";
+                                cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                                cout<<"2.- Huir.\n";
+                                cout<<"3.- Gritar para pedir ayuda.\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+
+                                    case 1:
+                                    cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2:
+                                    cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                    vida -=20;
+                                    cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                    cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                    cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                    cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                    cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3: 
+                                    cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+
+                                    default: cout<<"\nElije una opcion correcta";
+
+                                }
+                            }
+                            else{
+                                cout<<"\nCreo que tienes que leer mejor :P";
+
+                            }
+
+                        }
+                        else{
+                            cout<<"\nElija una opción correcta por favor.";
+
+                        }
+
+                    }
+                    else if(decision == 3){
+                        cout<<"\nAl salir corriendo te alejas demasiado de la criatura y terminas encontrandote con un enemigo poderoso.\n";
+                        cout<<"¿Que quieres hacer?\n";
+                        cout<<"1.- Atacar.\n";
+                        cout<<"2.- Huir.\n";
+                        cout<<"3.- Gritar para pedir ayuda.\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        switch(decision){
+
+                            case 1:
+                            cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 2:
+                            cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                            vida -=20;
+                            cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                            cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                            cout<<"Lamentas su perdida y una voz te propone acabar con la maldad de ese mundo.\n";
+                            cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                            cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 3: 
+                            cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+
+                            default: cout<<"\nElije una opcion correcta";
+
+                        }
+
+                    }
+                    else{
+                        cout<<"\nNecesitas conpresión lectora :P";
+
+                    }
+                    
+                } 
+                else{
+                    cout<<"\nCreo que no sabes seguir instrucciones. :/";
+                    
+                } 
+            }
+            else if (decision == 2){
+                cout<<"\nAl comunicarte te percatas que puedes hablar el mismo idioma que ellas.\n";
+                cout<<"Afortunadamente no te atacan e intentas pedirles ayuda, pero ninguna te hace caso, pues eres extraño para ellas.\n";
+                cout<<"Decides caminar hastas encontrar a alguien que sepa como puedes volver.\n";
+                cout<<"Inesperadamentee encuentras con una criatura amigable que te ofrece ayuda.\n";
+                cout<<"¿Aceptas su ayuda?\n";
+                cout<<"1.- Sí\n";
+                cout<<"2.- No\n";
+                cout<<"3.- La intentas atacar\n";
+                cout<<" Opción: ";
+                cin>>decision;
+
+                if (decision == 1){
+                    cout<<"\nLa criatura te guía a través de un portal que te lleva de vuelta a tu mundo, pero exiten algunos obstaculos en el camino.\n";
+                    vida -= 92;
+                    cout<<"Al final llegas a tu mundo de nuevo y antes de regresar te restan " <<vida<< " puntos de vida.\n";
+                    cout<<"FIN\n";
+                    cout<<"!Gracias por jugar¡";
+                
+                } 
+                else if (decision == 2){
+                    cout<<"\nDecides no aceptar la ayuda y continúas explorando por tu cuenta.\n";
+                    cout<<"Cuando estas a punto de irte la criatura te menciona que si no aceptas su ayuda moriras en un mundo tan violento como ese.\n";
+                    cout<<"Al final por el miedo aceptas su ayuda.\n";
+                    cout<<"\nLa criatura esta dispuesta a ayudarte a volver a tu mundo, pero primero tienes que hacerle un par de favores.\n";
+                    cout<<"¿Que deseas hacer?\n";
+                    cout<<"1.- Ayudarle (No tienes de otra, ¿o si?).\n";
+                    cout<<"2.- Negarte eh ir por tu cuenta.\n";
+                    cout<<"3.- Negociar para que te ayude sin necesidad de hacer los favores.\n";
+                    cout<<" Opcion: ";
+                    cin>>decision;
+
+                    if(decision == 1){
+                        cout<<"\nAceptas con la condicion de que te ayude a salir.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                        cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                        vida -= 50;
+                        cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                        cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                        cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                        cout<<"¿Que haces?\n";
+                        cout<<"1.- Avisarle a la criatura\n";
+                        cout<<"2.- No decir nada\n";
+                        cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        if(decision == 1){
+                            cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                            cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                            cout<<"¿Que respondes?\n";
+                            cout<<"1.- Decides quedarte para averiguar mas.\n";
+                            cout<<"2.- Pones alguna excusa para safarte.\n";
+                            cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+                                case 1: 
+                                cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                cout<<"Continuará...\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2: 
+                                cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3:
+                                cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                cout<<"Continuará...";
+                                cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                default: cout<<"\nTenías que arrinarlo :P";
+
+                            }
+
+                        }
+                        else if(decision == 2){
+                            cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                            cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                            cout<<"FIN\n";
+                            cout<<"¡Gracias por jugar!";
+
+                        }
+                        else if(decision == 3){
+                            cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                            cout<<"¿Que quieres hacer?\n";
+                            cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                            cout<<"2.- Huir.\n";
+                            cout<<"3.- Gritar para pedir ayuda.\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+
+                                case 1:
+                                cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2:
+                                cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                vida -=20;
+                                cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3: 
+                                cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+
+                                default: cout<<"Elije una opcion correcta";
+
+                            }
+                        }
+                        else{
+                            cout<<"\nCreo que tienes que leer mejor :P";
+
+                        }
+
+                    }
+                    else if(decision == 2){
+                        cout<<"\nEliges ir por tu cuenta y te alejas demasiado de la criatura y terminas encontrandote con un enemigo poderoso.\n";
+                        cout<<"¿Que quieres hacer?\n";
+                        cout<<"1.- Atacar.\n";
+                        cout<<"2.- Huir.\n";
+                        cout<<"3.- Gritar para pedir ayuda.\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        switch(decision){
+
+                            case 1:
+                            cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 2:
+                            cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                            vida -=20;
+                            cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                            cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                            cout<<"Lamentas su perdida y una voz te propone acabar con la maldad de ese mundo.\n";
+                            cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                            cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 3: 
+                            cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+
+                            default: cout<<"\nElije una opcion correcta";
+
+                        }
+                    }
+                    else if(decision == 3){
+                        cout<<"\nNo consigues nada negociando y te somete pues no tienesopcion.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                        cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                        vida -= 50;
+                        cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                        cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                        cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                        cout<<"¿Que haces?\n";
+                        cout<<"1.- Avisarle a la criatura\n";
+                        cout<<"2.- No decir nada\n";
+                        cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        if(decision == 1){
+                            cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                            cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                            cout<<"¿Que respondes?\n";
+                            cout<<"1.- Decides quedarte para averiguar mas.\n";
+                            cout<<"2.- Pones alguna excusa para safarte.\n";
+                            cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+                                case 1: 
+                                cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                cout<<"Continuará...\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2: 
+                                cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3:
+                                cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                cout<<"Continuará...";
+                                cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                default: cout<<"\nTenías que arrinarlo :P";
+
+                            }
+
+                        }
+                        else if(decision == 2){
+                            cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                            cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                            cout<<"FIN\n";
+                            cout<<"¡Gracias por jugar!";
+
+                        }
+                        else if(decision == 3){
+                            cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                            cout<<"¿Que quieres hacer?\n";
+                            cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                            cout<<"2.- Huir.\n";
+                            cout<<"3.- Gritar para pedir ayuda.\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+
+                                case 1:
+                                cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2:
+                                cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                vida -=20;
+                                cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3: 
+                                cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                vida -=50;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+
+                                default: cout<<"\nElije una opcion correcta";
+
+                            }
+                        }
+                        else{
+                            cout<<"\nCreo que tienes que leer mejor :P";
+
+                        }
+
+                    }
+                    else{
+                        cout<<"\nElija una opción correcta por favor.";
+
+                    }
+
+                } 
+                else if (decision == 3){
+                    cout<<"\nLa criatura te somete y te perdona la vida, pues eres un novato que no sabe lo que hace.\n";
+                    cout<<"¿Que haces?\n";
+                    cout<<"1.- Te enfadas y lo vuelves a atacar\n";
+                    cout<<"2.- Te relajas e intentas reconciliarte\n";
+                    cout<<"3.- Sales huyendo\n";
+                    cout<<" Opcion: ";
+                    cin>>decision;
+                    
+                    if(decision == 1){
+                        cout<<"\nMueres por tu inexperiencia en combate\n";
+                        vida -= 100;
+                        cout<<"Tu vida baja a " <<vida<< " puntos.\n"; 
+                        cout<<"Fin del juego\n";
+                        cout<<"¡Gracias por jugar!";
+
+                    }
+                    else if(decision == 2){
+                        cout<<"\nLa criatura esta dispuesta a ayudarte a volver a tu mundo, pero primero tienes que hacerle un par de favores por el inconveniente provocado.\n";
+                        cout<<"¿Que deseas hacer?\n";
+                        cout<<"1.- Ayudarle (No tienes de otra, ¿o si?).\n";
+                        cout<<"2.- Negarte eh ir por tu cuenta.\n";
+                        cout<<"3.- Negociar para que te ayude sin necesidad de hacer los favores.\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        if(decision == 1){
+                            cout<<"\nAceptas con la condicion de que te ayude a salir.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                            cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                            vida -= 50;
+                            cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                            cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                            cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                            cout<<"¿Que haces?\n";
+                            cout<<"1.- Avisarle a la criatura\n";
+                            cout<<"2.- No decir nada\n";
+                            cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            if(decision == 1){
+                                cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                                cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                                cout<<"¿Que respondes?\n";
+                                cout<<"1.- Decides quedarte para averiguar mas.\n";
+                                cout<<"2.- Pones alguna excusa para safarte.\n";
+                                cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+                                    case 1: 
+                                    cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                    cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                    cout<<"Continuará...\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2: 
+                                    cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                    cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                    cout<<"FIN\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3:
+                                    cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                    cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                    cout<<"Continuará...";
+                                    cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                    default: cout<<"\nTenías que arrinarlo :P";
+
+                                }
+
+                            }
+                            else if(decision == 2){
+                                cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                                cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+
+                            }
+                            else if(decision == 3){
+                                cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                                cout<<"¿Que quieres hacer?\n";
+                                cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                                cout<<"2.- Huir.\n";
+                                cout<<"3.- Gritar para pedir ayuda.\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+
+                                    case 1:
+                                    cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2:
+                                    cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                    vida -=20;
+                                    cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                    cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                    cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                    cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                    cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3: 
+                                    cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+
+                                    default: cout<<"\nElije una opcion correcta";
+
+                                }
+                            }
+                            else{
+                                cout<<"\nCreo que tienes que leer mejor :P";
+
+                            }
+
+                        }
+                        else if(decision == 2){
+                            cout<<"\nEliges ir por tu cuenta y te alejas demasiado de la criatura y terminas encontrandote con un enemigo poderoso.\n";
+                            cout<<"¿Que quieres hacer?\n";
+                            cout<<"1.- Atacar.\n";
+                            cout<<"2.- Huir.\n";
+                            cout<<"3.- Gritar para pedir ayuda.\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            switch(decision){
+
+                                case 1:
+                                cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                vida -=100;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 2:
+                                cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                vida -=20;
+                                cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                cout<<"Lamentas su perdida y una voz te propone acabar con la maldad de ese mundo.\n";
+                                cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                cout<<"¡Gracias por jugar!";
+                                break;
+
+                                case 3: 
+                                cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                vida -=100;
+                                cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                cout<<"Fin del juego.\n";
+                                cout<<"¡Gracias por jugar!";
+
+                                default: cout<<"\nElije una opcion correcta";
+
+                            }
+                        }
+                        else if(decision == 3){
+                            cout<<"\nNo consigues nada negociando y te somete pues no tienesopcion.\nEl trabajo consiste en conseguir dos objetos de poder desconocido los cuales valen mucho en ese mundo.\n";
+                            cout<<"En el camino encuentran a enemigos, pero la criatura te enseña a lidiar con ellos.\n";
+                            vida -= 50;
+                            cout<<"Al final encuentran un artefacto de los dos que buscaban y quedas con "<<vida<<" puntos de salud\n";
+                            cout<<"La criatura decide ayudarte a salir, pues no encontraron el segundo artefacto.\n";
+                            cout<<"De camino al portal para salir empiezas a escuchar una voz en tu cabeza que te dice que aun no es momento de salir de ese mundo.\n";
+                            cout<<"¿Que haces?\n";
+                            cout<<"1.- Avisarle a la criatura\n";
+                            cout<<"2.- No decir nada\n";
+                            cout<<"3.- Ir hacia donde te indica la voz sin decir nada\n";
+                            cout<<" Opcion: ";
+                            cin>>decision;
+
+                            if(decision == 1){
+                                cout<<"\nLa criatura se extraña de que pase eso pues como eres de otro mundo no debería de suceder eso. A continuación explíca que esas voces solo las escuchan los jefes que dirigen hacía la paz el mundo en el que te encuentras\n";
+                                cout<<"La criatura te dice que si es verdad lo que dices tu puedes ser una pieza importante para que el mundo de la criatura encuentre la verdadera paz. La criatura te pregunta si quieres averiguar más sobre eso.\n";
+                                cout<<"¿Que respondes?\n";
+                                cout<<"1.- Decides quedarte para averiguar mas.\n";
+                                cout<<"2.- Pones alguna excusa para safarte.\n";
+                                cout<<"3.- Respondes que es mejor ayudar desde el exterior (jugando).\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+                                    case 1: 
+                                    cout<<"\n¡Muy bien, te emociona la aventura y quieres explorar más de ese mundo!. Estas decidido a continuar la aventura.\n";
+                                    cout<<"Para continuar la aventura tendrá que aprobar esta demo.\n";
+                                    cout<<"Continuará...\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2: 
+                                    cout<<"\nLa criatura se da cuenta de que eres un cobarde y mejor te deja ir a tu mundo.\n";
+                                    cout<<"Regresas a tu mundo tranquilo. Pero después de un tiempo te arrepientes de tu decision.\n";
+                                    cout<<"FIN\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3:
+                                    cout<<"\nLa criatura te entiende y regresas a tu mundo\n";
+                                    cout<<"Pero estas decidido a ayudarlos jugando como siempre lo has hecho, pero con la diferencia de que ahora tienen la capacidad de comunicarse.\n";
+                                    cout<<"Continuará...";
+                                    cout<<"¡Gracias por jugar la demo!. Para continuar con la historia debe aprobar esta misma";
+
+                                    default: cout<<"\nTenías que arrinarlo :P";
+
+                                }
+
+                            }
+                            else if(decision == 2){
+                                cout<<"\nIgnoras a la voz. Te despides de la criatura y sus compañeros y sales del mundo.\n";
+                                cout<<"Quedas intrigado por la voz que escuchaste en el juego y enciendes el videojuego de nuevo, pero no responde.\n";
+                                cout<<"FIN\n";
+                                cout<<"¡Gracias por jugar!";
+
+                            }
+                            else if(decision == 3){
+                                cout<<"\nTe alejas demasiado de la criatura la cual era la que te ayudaba a eliminar a los enemigos y terminas encontrandote con un enemigo poderoso.\n";
+                                cout<<"¿Que quieres hacer?\n";
+                                cout<<"1.- Atacar con lo que has aprendido de la criatura.\n";
+                                cout<<"2.- Huir.\n";
+                                cout<<"3.- Gritar para pedir ayuda.\n";
+                                cout<<" Opcion: ";
+                                cin>>decision;
+
+                                switch(decision){
+
+                                    case 1:
+                                    cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 2:
+                                    cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                                    vida -=20;
+                                    cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                                    cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                                    cout<<"Lamentas su perdida y la voz te propone acabar con la maldad de ese mundo.\n";
+                                    cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                                    cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                                    cout<<"¡Gracias por jugar!";
+                                    break;
+
+                                    case 3: 
+                                    cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                                    vida -=50;
+                                    cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                                    cout<<"Fin del juego.\n";
+                                    cout<<"¡Gracias por jugar!";
+
+                                    default: cout<<"\nElije una opcion correcta";
+
+                                }
+                            }
+                            else{
+                                cout<<"\nCreo que tienes que leer mejor :P";
+
+                            }
+
+                        }
+                        else{
+                            cout<<"\nElija una opción correcta por favor.";
+
+                        }
+
+                    }
+                    else if(decision == 3){
+                        cout<<"\nAl salir corriendo te alejas demasiado de la criatura y terminas encontrandote con un enemigo poderoso.\n";
+                        cout<<"¿Que quieres hacer?\n";
+                        cout<<"1.- Atacar.\n";
+                        cout<<"2.- Huir.\n";
+                        cout<<"3.- Gritar para pedir ayuda.\n";
+                        cout<<" Opcion: ";
+                        cin>>decision;
+
+                        switch(decision){
+
+                            case 1:
+                            cout<<"\nNo eres lo suficientemente hábil y terminas perdiendo.\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 2:
+                            cout<<"\nLogras encontrar a la criatura y te ayuda a enfrentar al enemigo.\n";
+                            vida -=20;
+                            cout<<"Al final derrotan al enemigo y te restan "<<vida<<" puntos de salud.\n";
+                            cout<<"La criatura termina mal herida y con su último esfuerzo te dice en donde puedes encontrar la salida. Al final la criatura muere...\n";
+                            cout<<"Lamentas su perdida y una voz te propone acabar con la maldad de ese mundo.\n";
+                            cout<<"Aceptas y te adentras en la aventura.\n Continuará...\n";
+                            cout<<"Para continuar la aventura tiene que aprobar esta demo.\n";
+                            cout<<"¡Gracias por jugar!";
+                            break;
+
+                            case 3: 
+                            cout<<"\nNadie te escucha y el enemigo termina contigo\n";
+                            vida -=100;
+                            cout<<"Tu vida se reduce a "<<vida<<" puntos de salud.\n";
+                            cout<<"Fin del juego.\n";
+                            cout<<"¡Gracias por jugar!";
+
+                            default: cout<<"\nElije una opcion correcta";
+
+                        }
+
+                    }
+                    else{
+                        cout<<"\nNecesitas compresión lectora :P";
+
+                    }
+                    
+                } 
+                else{
+                    cout<<"\nCreo que no sabes seguir instrucciones. :/";
+                    
+                }
+
+            } 
+            else if (decision == 3){
+                cout<<"\nIntentas explorar por tu cuenta pero como no tienes experiencia y nivel mueres.\n";
+                vida -=100;
+                cout<<"Tu salud se reduce a "<<vida<<" puntos de salud.\n";
+                cout<<"Fin del juego.";
+
+            }
+            else{
+                cout <<"\nOpción no válida. Fin del juego.";
+            }
 		}
         else if (decision == 2){
             cout<<"\nCae un rayo y ocurre algo fantástico que te transporta a otro mundo.\n";
@@ -74,6 +1323,8 @@ int main()
             cout<<"2.- Intentar comunicarte con las criaturas\n";
             cout<<"3.- Buscar una salida\n Opción: ";
             cin>>decision;
+
+			
 
 		}
         else if (decision == 3){
