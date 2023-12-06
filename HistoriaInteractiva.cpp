@@ -54,6 +54,36 @@ int main()
         cout<<"3.- Dejar de jugar, ya tuviste suficiente\n";
         cout<<"Opcion: ";
 		cin>>decision;
+
+        if (decision == 1){
+            cout<<"\nGolpeas tan duro que empieza a ocurrir una descarga eléctrica y te desmayas\n";
+            cout<<"Despiertas y encuentras en un lugar misterioso con criaturas extrañas. Tu salud es de "<<vida<<" puntos.\n";
+            cout<<"¿Qué quieres hacer?\n";
+            cout<<"1.- Explorar el entorno\n";
+            cout<<"2.- Intentar comunicarte con las criaturas\n";
+            cout<<"3.- Buscar una salida\n Opción: ";
+            cin>>decision;
+
+		}
+        else if (decision == 2){
+            cout<<"\nCae un rayo y ocurre algo fantástico que te transporta a otro mundo.\n";
+            cout<<"Te encuentras en un lugar misterioso con criaturas extrañas. Tu salud es de "<<vida<<" puntos.\n";
+            cout<<"¿Qué quieres hacer?\n";
+            cout<<"1.- Explorar el entorno\n";
+            cout<<"2.- Intentar comunicarte con las criaturas\n";
+            cout<<"3.- Buscar una salida\n Opción: ";
+            cin>>decision;
+
+		}
+        else if (decision == 3){
+            cout<<"\nDejas de jugar y duermes placidamente.\n";
+            cout<<"FIN";
+        } 
+        else{
+            cout<<"\nElige una opción válida por favor.";
+            
+        }  
+        break;
 		
 		case 3:
 		cout<<"\n Te encuentras en tu casa, aburrido sin nada que hacer, decides jugar videojuegos para despejarte pues la universidad es algo agobiante para ti, enciedes tu consola y despues de un rato empiezas a ver distorcionada la imagen de la tv.\n";
