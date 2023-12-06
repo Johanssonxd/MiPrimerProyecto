@@ -1,2 +1,5 @@
 # MiPrimerProyecto
-Detalles de como cree mi juego interactivo en C++
+
+Johandriy Peña
+
+Grupo 1158
