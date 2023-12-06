@@ -28,6 +28,23 @@ int main()
         cout<<"3.- Dejar de jugar, ya tuviste suficiente\n";
         cout<<" Opcion: ";
 		cin>>decision;
+
+        if (decision == 1){
+	        cout<<"¡Muy bien, funciona!. Sigues jugando sin ningun problema.\nFIN.";
+
+		}
+		else if(decision == 2){
+	        cout<<"Cae un rayo y mueres por una descarga eléctrica.\nFIN.\nHAHAHA\n¿Enserio elegiste fácil?, prueba otra dificultad";
+
+		}
+        else if(decision == 3){
+	        cout<<"Vuelves a la cama y duermes placidamente.\nFIN.";
+
+		}
+        else{
+            cout<<"Elija una opcion correcta por favor";
+
+        } break;
 	
 		case 2: 
 		cout<<"\nTe encuentras en tu casa, aburrido sin nada que hacer, decides jugar videojuegos para despejarte pues la universidad es algo agobiante para ti, enciedes tu consola y despues de un rato empiezas a ver distorcionada la imagen de la tv.\n";
