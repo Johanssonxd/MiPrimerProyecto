@@ -64,6 +64,7 @@ int main()
             cout<<"3.- Buscar una salida\n Opción: ";
             cin>>decision;
 
+			
 		}
         else if (decision == 2){
             cout<<"\nCae un rayo y ocurre algo fantástico que te transporta a otro mundo.\n";
