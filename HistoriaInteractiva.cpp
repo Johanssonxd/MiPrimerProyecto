@@ -17,6 +17,42 @@ int main()
 	cout<<"3.- Difícil (Si eres sensible mejor intentalo en medio)"<<endl;
 	cout<<"4.- Salir" <<endl;
 	cout<<" Opcion: "; cin>>opcion;
+
+    switch(opcion){
+
+        case 1:
+        cout<<"\n Te encuentras en tu casa, aburrido sin nada que hacer, decides jugar videojuegos para despejarte pues la universidad es algo agobiante para ti, enciedes tu consola y despues de un rato empiezas a ver distorcionada la imagen de la tv.\n";
+        cout<<"¿Que quieres hacer?\n";
+        cout<<"1.- Golpear la television\n";
+        cout<<"2.- Revisar la corriente de luz\n";
+        cout<<"3.- Dejar de jugar, ya tuviste suficiente\n";
+        cout<<" Opcion: ";
+		cin>>decision;
+	
+		case 2: 
+		cout<<"\nTe encuentras en tu casa, aburrido sin nada que hacer, decides jugar videojuegos para despejarte pues la universidad es algo agobiante para ti, enciedes tu consola y despues de un rato empiezas a ver distorcionada la imagen de la tv.\n";
+        cout<<"¿Que quieres hacer?\n";
+        cout<<"1.- Golpear la television\n";
+        cout<<"2.- Revisar la corriente de luz\n";
+        cout<<"3.- Dejar de jugar, ya tuviste suficiente\n";
+        cout<<"Opcion: ";
+		cin>>decision;
+		
+		case 3:
+		cout<<"\n Te encuentras en tu casa, aburrido sin nada que hacer, decides jugar videojuegos para despejarte pues la universidad es algo agobiante para ti, enciedes tu consola y despues de un rato empiezas a ver distorcionada la imagen de la tv.\n";
+        cout<<"¿Que quieres hacer?\n";
+        cout<<"1.- Golpear la television\n";
+        cout<<"2.- Revisar la corriente de luz\n";
+        cout<<"3.- Dejar de jugar, ya tuviste suficiente\n";
+        cout<<"Opcion: ";
+		cin>>decision;
+		
+		
+		case 4: cout<<"\nBuen dia "<<nombre<<" :)"; break;
+		
+		default: cout<<"\n¿Me quiere sabotear?"; break;
+
+    }
 	
     	return 0;
 }
